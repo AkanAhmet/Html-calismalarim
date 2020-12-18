@@ -1,13 +1,90 @@
-<!Doctype html>
-<html>
+<!DOCTYPE html>
+<!--   Atom editör kullanıldı, ek olarak beautify(ctrl+alt+b), activate-power-mode, emmet, hydrogen paketleri kuruldu. -->
+<!--For Space = &nbsp;  ||||||| For Tab = &emsp; -->
+<html lang="en" dir="ltr">
+<!--  HyperText Markup Language , Last version is html5--->
+
 <head>
-<title> İLK SAYFA </title>
+  <meta charset="utf-8">
+  <style media="screen">
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: red;
+      text-align: center;
+    }
+
+    #kedi {
+      margin-left: 620px;
+    }
+
+    p {
+      text-align: center;
+    }
+  </style>
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  <title>Ahmet AKAN</title>
 </head>
 
 <body>
-<a href="www.google.com.tr"
-<p> Burası Gövde metni</p>
-</body>
 
+  <H1>The Web Structure</h1> <!-- //////////////////////////////////////////// -->
+  <p>&emsp;The ability to code using HTML is essential for any web professional. Acquiring this skill should be the starting point for anyone who is learning how to create content for the web.
+    HTML files are text files, so you can use any text editor to create your first webpage. HTML file names should end in either .html or .htm . </p>
+  <h2>Modern Web Design</h2>
+  <p> <strong>HTML:</strong> Structure <br>
+    <strong>CSS:</strong> Presentation <br>
+    <strong>JavaScript: </strong>Behavior <br>
+    <strong>PHP or similar:</strong> Backend <br>
+    <strong>CMS:</strong> Content Management
+  </p>
+
+  <h2>Text Formatting </h3> <!-- //////////////////////////////////////////// -->
+    <p>This is regular text.</p>
+    <p><b>This is bold text.</b></p>
+    <p><i>This is italic text.</i></p>
+    <p><big>This is big text.</big></p>
+    <p><small>This is small text.</small></p>
+    <p><strong>This is strong text.</strong></p>
+    <p><sub>This is subscripted text.</sub></p>
+    <p><ins>This is inserted text.</ins></p>
+    <p><del>This is deleted text.</del></p>
+
+    <h2>Heading</h2> <!-- //////////////////////////////////////////// -->
+    <h1 style="color:blue">This is heading 1</h1>
+    <h2 style="color:blue">This is heading 2</h2>
+    <h3 style="color:blue">This is heading 3</h3>
+    <h4 style="color:blue">This is heading 4</h4>
+    <h5 style="color:blue">This is heading 5</h5>
+    <h6 style="color:blue">This is heading 6</h6>
+
+    <h2>HTML Attributes</h2> <!-- //////////////////////////////////////////// -->
+    <p>&emsp;Attributes provide additional information about an element or a tag, while also modifying them. Most attributes have a value; the value modifies the attribute.
+      Attributes are always specified in the start tag, and they appear in name="value" pairs. An element's width and high can be defined using pixels or percentages. width = "50px" or high = "50%"</p>
+
+    <h2>The <img> Tag</h2> <!-- //////////////////////////////////////////// -->
+    <p>The |img| tag is used to insert an image. It contains only attributes, and does not have a closing tag. The image's URL (address) can be defined using the src attribute.The alt attribute specifies an alternate text for an image.
+      | img src="image.jpg" alt = "" | o define the image size, use the width and height attributes.
+      The value can be specified in pixels or as a percentage. By default, an image has no borders. Use the border attribute within the image tag to create a border around the image.
+    </p>
+    <img id="kedi" src="images/cat.jpg" alt="" border="10px" width="250px" height="250px" />
+
+    <h2>Links - The |a| Tag</h2> <!-- //////////////////////////////////////////// -->
+    <p>Links are also an integral part of every web page. You can add links to text or images that will enable the user to click on them in order to be directed to another file or webpage.
+      In HTML, links are defined using the |a| tag.Use the href attribute to define the link's destination address. To link an image to another document, simply nest the |img| tag inside |a| tags.</p>
+    <a href="http://www.google.com.tr">
+      <p style="color:grey "> <strong>Google ' a gitmek için tıklayın.</strong>
+        <p>
+    </a>
+
+    <a href="http://www.google.com.tr" target="_blank">
+      <p style="color:grey "> <strong>Google ' a YENİ SEKMEDE gitmek için tıklayın.</strong>
+        <p>
+    </a>
+    <p>The target attribute specifies where to open the linked document.
+      Giving a _blank value to your attribute will have the link open in a new window or new tab. A visited link is underlined and purple. </p>
 
 </html>
