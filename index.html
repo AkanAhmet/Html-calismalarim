@@ -17,7 +17,8 @@
       text-align: center;
     }
 
-    #kedi {
+    #kedi,
+    #input {
       margin-left: 620px;
     }
 
@@ -33,8 +34,11 @@
 
   <H1>The Web Structure</h1> <!-- //////////////////////////////////////////// -->
   <p>&emsp;The ability to code using HTML is essential for any web professional. Acquiring this skill should be the starting point for anyone who is learning how to create content for the web.
-    HTML files are text files, so you can use any text editor to create your first webpage. HTML file names should end in either .html or .htm . </p>
-  <h2>Modern Web Design</h2>
+    HTML files are text files, so you can use any text editor to create your first webpage. HTML file names should end in either <b>.html</b> or <b>.htm</b> . </p>
+  <p>When writing HTML5 documents, one of the first new features that you'll notice is the doc type declaration: |!DOCTYPE HTML|
+    <br>The character encoding (charset) declaration is also simplified: |meta charset="UTF-8"|
+  </p>
+  <h2>Modern Web Design</h2> <!-- //////////////////////////////////////////// -->
   <p> <strong>HTML:</strong> Structure <br>
     <strong>CSS:</strong> Presentation <br>
     <strong>JavaScript: </strong>Behavior <br>
@@ -63,28 +67,125 @@
 
     <h2>HTML Attributes</h2> <!-- //////////////////////////////////////////// -->
     <p>&emsp;Attributes provide additional information about an element or a tag, while also modifying them. Most attributes have a value; the value modifies the attribute.
-      Attributes are always specified in the start tag, and they appear in name="value" pairs. An element's width and high can be defined using pixels or percentages. width = "50px" or high = "50%"</p>
+      Attributes are always specified in the start tag, and they appear in <b>name="value"</b>pairs. An element's width and high can be defined using pixels or percentages. <b>width = "50px"</b> or <b>high = "50%"</b></p>
+    <p>HTML <b>Colors</b> are expressed as hexadecimal values. RGB color values are supported in all browsers.
+      0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+      As you can see, there are 16 values there, 0 through F. Zero represents the lowest value, and F represents the highest.
+      Hex values are written using the hashtag symbol (#), followed by either three or six hex characters.</p>
+    <p>The <b>bgcolor</b> attribute can be used to change the web page's background color.</p>
 
-    <h2>The <img> Tag</h2> <!-- //////////////////////////////////////////// -->
-    <p>The |img| tag is used to insert an image. It contains only attributes, and does not have a closing tag. The image's URL (address) can be defined using the src attribute.The alt attribute specifies an alternate text for an image.
-      | img src="image.jpg" alt = "" | o define the image size, use the width and height attributes.
+    <h2>The |img|Tag</h2> <!-- //////////////////////////////////////////// -->
+    <p>The <b>|img|</b> tag is used to insert an image. It contains only attributes, and does not have a closing tag. The image's URL (address) can be defined using the src attribute.The alt attribute specifies an alternate text for an image.
+      <b><br>|img src="image.jpg" alt = "" |</b> o define the image size, use the width and height attributes.
       The value can be specified in pixels or as a percentage. By default, an image has no borders. Use the border attribute within the image tag to create a border around the image.
     </p>
     <img id="kedi" src="images/cat.jpg" alt="" border="10px" width="250px" height="250px" />
 
     <h2>Links - The |a| Tag</h2> <!-- //////////////////////////////////////////// -->
     <p>Links are also an integral part of every web page. You can add links to text or images that will enable the user to click on them in order to be directed to another file or webpage.
-      In HTML, links are defined using the |a| tag.Use the href attribute to define the link's destination address. To link an image to another document, simply nest the |img| tag inside |a| tags.</p>
+      In HTML, links are defined using the <b>|a|</b> tag.Use the href attribute to define the link's destination address. To link an image to another document, simply nest the <b>|img|</b> tag inside <b>|a|</b> tags.</p>
     <a href="http://www.google.com.tr">
-      <p style="color:grey "> <strong>Google ' a gitmek için tıklayın.</strong>
+      <p style="color:grey "> <strong>Click here to href Google.</strong>
         <p>
     </a>
 
     <a href="http://www.google.com.tr" target="_blank">
-      <p style="color:grey "> <strong>Google ' a YENİ SEKMEDE gitmek için tıklayın.</strong>
+      <p style="color:grey "> <strong>Click here to href Google in New Tab.</strong>
         <p>
     </a>
     <p>The target attribute specifies where to open the linked document.
-      Giving a _blank value to your attribute will have the link open in a new window or new tab. A visited link is underlined and purple. </p>
+      Giving a <b> _blank</b> value to your attribute will have the link open in a new window or new tab. A visited link is <ins>underlined</ins> and purple. </p>
+    <h2>LISTS</h2> <!-- //////////////////////////////////////////// -->
+    <p>HTML <strong>Ordered List</strong> starts with the <b>|ol|</b> tag, and each list item is defined by the <b>|li|</b> tag. The list items will be automatically marked with <b>numbers</b>.</p>
+    <ol>
+      <li>Ordered List Item 1</li>
+      <li>Ordered List Item 2</li>
+      <li>Ordered List Item 3</li>
+    </ol>
+    <p>An <strong>Unordered List </strong> starts with the |ul| tag. The list items will be marked with <b>bullets</b>:</p>
+    <ul>
+      <li> Unordered List Item 1</li>
+      <li> Unordered List Item 2</li>
+      <li> Unordered List Item 3</li>
+    </ul>
+    <h2>TABLES</h2> <!-- //////////////////////////////////////////// -->
+    <p>Tables are defined by using the <b>|table|</b> tag.
+      Tables are divided into table rows with the |tr| tag.
+      Table rows are divided into table columns (table data) with the <b>|td|</b> tag. Table data tags <b>|td|</b>act as data containers within the table.
+      They can contain all sorts of HTML elements, such as text, images, lists, other tables, and so on. A border can be added using the <b>border</b> attribute. Here is an example of a table with <b>four row</b> and <b>three columns:</b></p>
+    <table border="10px" align="center">
+      <tr bgcolor="red">
+        <td>Row 1 -Table Column 1</td>
+        <td>Row 1 -Table Column 2</td>
+        <td>Row 1 -Table Column 3</td>
+      </tr>
+      <tr bgcolor="yellow">
+        <td>Row 2 -Table Column 1</td>
+        <td>Row 2 -Table Column 2</td>
+      </tr>
+      <tr bgcolor="grey">
+        <td>Row 3 -Table Column 1</td>
+        <td colspan="2">Row 3 -Table Column 2(Colspan Power !)</td>
+      </tr>
+      <tr bgcolor="pink">
+        <td colspan="3">Row 4 -Table Column 1</td>
+      </tr>
+    </table>
+    <h2>Inline and Block Elements</h2> <!-- //////////////////////////////////////////// -->
+    <h3 style="color:blue">Types of Elements :</h3>
+    <p>In HTML, most elements are defined as block level or inline elements. Block level elements start from a new line.</p>
+    <p>For example: |h1|, |form|, |li|, |ol|, |ul|, |p|, |pre|, |table|, |div|, etc.</p>
+    <p>Inline elements are normally displayed without line breaks. </p>
+    <p>For example: |b|, |a|, |strong|, |img|, |input|, |em|, |span|, etc. </p>
+    <p>The <b>|div|</b> element is a block-level element that is often used as a <b>container for other HTML elements.</b></p>
+    <p>When used together with some CSS styling, the <b>|div| </b> element can be used to style blocks of content:</p>
+
+    <div style="background-color:green; color:white;padding:20px">
+      <p>Div usage example :</p>
+      <p>style = "background-color:green; color : white; padding : 20px"</p>
+    </div>
+
+    <p>Similarly, the <b>|span|</b> element is an inline element that is often used as a container for some text.
+      When used together with CSS, the |span| element can be used to style <b>parts of the text:</b></p>
+    <p>Some <span style="color:red">Important</span> Message</p>
+    <p><span style="color:green">Summary:</span><br> The |div| element defines a block-level section in a document.
+    <p>The |span| element defines an inline section in a document.</p>
+    <p> Other elements can be used either as block level elements or inline elements. This includes the following elements:</p>
+    <p>APPLET - embedded Java applet </P>
+    <p> IFRAME - Inline frame </p>
+    <p>INS - inserted text </p>
+    <p> MAP - image map </p>
+    <p> OBJECT - embedded object </p>
+    <p> SCRIPT - script within an HTML document</p>
+    <p> You can insert inline elements inside block elements. For example, you can have multiple <b>|span|</b> elements inside a <b>|div|</b> element.
+      Inline elements cannot contain any block level elements.
+    </p>
+    <h2>The |form| Element</h2> <!-- //////////////////////////////////////////// -->
+    <p>HTML forms are used to collect information from the user. Usually the form is submitted to a web page on a web server.</p>
+    <p>The <b>method attribute</b> specifies the HTTP method (<b>GET</b> or <b>POST</b>) to be used when forms are submitted. The name attribute specifies a name for a form.</p>
+    <p>|form action="url" method="GET"| OR |form action="url" method="POST"|</p>
+    <p>When you use <b>GET</b>, the form data will be visible in the page address.
+      Use <b>POST</b> if the form is updating data, or includes sensitive information (passwords).
+      POST offers better security because the submitted data is not visible in the page address.
+      After the form is submitted, the data should be processed on the server using a programming language, such as PHP.</p>
+    <p>To take in user input, you need the corresponding form elements, such as text fields.
+      The <b>|input|</b> element has many variations, depending on the type attribute. It can be a text, password, radio, URL, submit, etc.</p>
+
+    <form action="http://google.com" align="center">
+      <span style="color:blue"> Email Input :&emsp;&nbsp;&nbsp; </span> <input type="email" placeholder="example@gmail.com" required> <br>
+      <span style="color:blue">Password Input : </span> <input type="password" placeholder="******" required> <br>
+      <button type="submit" name="button"> Submit</button>
+    </form>
+
+    <p>If we change the input type to <b>"radio"</b>, it allows the user select<b> only one </b> of a number of choices:</p>
+    <input type="radio" id="input" name="gender" value="Male">Male
+    <input type="radio" id="input " name="gender" value="Female">Female
+    <input type="radio" id="input " name="gender" value="dontWant">Dont want to give information
+
+    <p>The type <b>"checkbox"</b> allows the user to select <b>more than one</b> option:</p>
+    <input type="checkbox" id="input" name="gender" value="Male">Male
+    <input type="checkbox" id="input " name="gender" value="Female">Female
+    <input type="checkbox" id="input " name="gender" value="dontWant">Dont want to give information
+
 
 </html>
