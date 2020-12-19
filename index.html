@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--   Atom editör kullanıldı, ek olarak beautify(ctrl+alt+b), activate-power-mode, emmet, hydrogen paketleri kuruldu. -->
+<!--   Atom editör used for this lesson , addionaly, beautify(ctrl+alt+b), activate-power-mode, emmet, hydrogen packages installed. -->
 <!--For Space = &nbsp;  ||||||| For Tab = &emsp; -->
 <html lang="en" dir="ltr">
 <!--  HyperText Markup Language , Last version is html5--->
@@ -32,20 +32,47 @@
 
 <body>
 
-  <H1>The Web Structure</h1> <!-- //////////////////////////////////////////// -->
+  <header>
+    <img src="images/AnimalsBannerLogo.jpg" width="100%" height="200px" alt="BannerLogo">
+  </header>
+
+  <p>This document following , <a href="https://www.sololearn.com/learning/1014"> SoloLearn HTML Course</a> </p>
+
+  <nav>
+    <table width="100%" border="15px">
+      <tr>
+        <td align="center" bgcolor="grey"><a href="index.html#one">The Web Structure </td>
+        <td align="center" bgcolor="yellow"><a href="index.html#two">Modern Web Design </td>
+        <td align="center" bgcolor="green"> <a href="index.html#three">HTML Attributes</td>
+        <td align="center" bgcolor="brown"><a href="index.html#four">Form </td>
+      </tr>
+    </table>
+  </nav>
+  <H1 id="one">The Web Structure</h1> <!-- //////////////////////////////////////////// -->
   <p>&emsp;The ability to code using HTML is essential for any web professional. Acquiring this skill should be the starting point for anyone who is learning how to create content for the web.
     HTML files are text files, so you can use any text editor to create your first webpage. HTML file names should end in either <b>.html</b> or <b>.htm</b> . </p>
-  <p>When writing HTML5 documents, one of the first new features that you'll notice is the doc type declaration: |!DOCTYPE HTML|
-    <br>The character encoding (charset) declaration is also simplified: |meta charset="UTF-8"|
-  </p>
-  <h2>Modern Web Design</h2> <!-- //////////////////////////////////////////// -->
+  <p>When writing HTML5 documents, one of the first new features that you'll notice is the doc type declaration: |!DOCTYPE HTML|</p>
+  <p>The character encoding (charset) declaration is also simplified: |meta charset="UTF-8"|</p>
+  <p> For favicon |link rel="icon" href="images/favicon.png" type="image/x-icon" /|</p>
+  <p> HTML is not a case sensitive language. Horizontal Lines : |hr| defines a thematic break. </p>
+
+
+  <br>
+  <br>
+  <img src="images/ContentModel.png" style="padding:50px" width="45%" alt="ContentModel">
+  <img src="images/ContentModel2.png" width="45%" alt="ContentModel2">
+  <br>
+  <img src="images/sablon.png" style="padding-left:420px" alt="sablon">
+
+  <hr>
+  <h2 id="two">Modern Web Design</h2> <!-- //////////////////////////////////////////// -->
   <p> <strong>HTML:</strong> Structure <br>
     <strong>CSS:</strong> Presentation <br>
     <strong>JavaScript: </strong>Behavior <br>
     <strong>PHP or similar:</strong> Backend <br>
     <strong>CMS:</strong> Content Management
   </p>
-
+  <hr>
   <h2>Text Formatting </h3> <!-- //////////////////////////////////////////// -->
     <p>This is regular text.</p>
     <p><b>This is bold text.</b></p>
@@ -56,7 +83,7 @@
     <p><sub>This is subscripted text.</sub></p>
     <p><ins>This is inserted text.</ins></p>
     <p><del>This is deleted text.</del></p>
-
+    <hr>
     <h2>Heading</h2> <!-- //////////////////////////////////////////// -->
     <h1 style="color:blue">This is heading 1</h1>
     <h2 style="color:blue">This is heading 2</h2>
@@ -64,8 +91,8 @@
     <h4 style="color:blue">This is heading 4</h4>
     <h5 style="color:blue">This is heading 5</h5>
     <h6 style="color:blue">This is heading 6</h6>
-
-    <h2>HTML Attributes</h2> <!-- //////////////////////////////////////////// -->
+    <hr>
+    <h2 id="three">HTML Attributes</h2> <!-- //////////////////////////////////////////// -->
     <p>&emsp;Attributes provide additional information about an element or a tag, while also modifying them. Most attributes have a value; the value modifies the attribute.
       Attributes are always specified in the start tag, and they appear in <b>name="value"</b>pairs. An element's width and high can be defined using pixels or percentages. <b>width = "50px"</b> or <b>high = "50%"</b></p>
     <p>HTML <b>Colors</b> are expressed as hexadecimal values. RGB color values are supported in all browsers.
@@ -73,14 +100,14 @@
       As you can see, there are 16 values there, 0 through F. Zero represents the lowest value, and F represents the highest.
       Hex values are written using the hashtag symbol (#), followed by either three or six hex characters.</p>
     <p>The <b>bgcolor</b> attribute can be used to change the web page's background color.</p>
-
+    <hr>
     <h2>The |img|Tag</h2> <!-- //////////////////////////////////////////// -->
     <p>The <b>|img|</b> tag is used to insert an image. It contains only attributes, and does not have a closing tag. The image's URL (address) can be defined using the src attribute.The alt attribute specifies an alternate text for an image.
       <b><br>|img src="image.jpg" alt = "" |</b> o define the image size, use the width and height attributes.
       The value can be specified in pixels or as a percentage. By default, an image has no borders. Use the border attribute within the image tag to create a border around the image.
     </p>
     <img id="kedi" src="images/cat.jpg" alt="" border="10px" width="250px" height="250px" />
-
+    <hr>
     <h2>Links - The |a| Tag</h2> <!-- //////////////////////////////////////////// -->
     <p>Links are also an integral part of every web page. You can add links to text or images that will enable the user to click on them in order to be directed to another file or webpage.
       In HTML, links are defined using the <b>|a|</b> tag.Use the href attribute to define the link's destination address. To link an image to another document, simply nest the <b>|img|</b> tag inside <b>|a|</b> tags.</p>
@@ -95,6 +122,7 @@
     </a>
     <p>The target attribute specifies where to open the linked document.
       Giving a <b> _blank</b> value to your attribute will have the link open in a new window or new tab. A visited link is <ins>underlined</ins> and purple. </p>
+    <hr>
     <h2>LISTS</h2> <!-- //////////////////////////////////////////// -->
     <p>HTML <strong>Ordered List</strong> starts with the <b>|ol|</b> tag, and each list item is defined by the <b>|li|</b> tag. The list items will be automatically marked with <b>numbers</b>.</p>
     <ol>
@@ -108,6 +136,7 @@
       <li> Unordered List Item 2</li>
       <li> Unordered List Item 3</li>
     </ul>
+    <hr>
     <h2>TABLES</h2> <!-- //////////////////////////////////////////// -->
     <p>Tables are defined by using the <b>|table|</b> tag.
       Tables are divided into table rows with the |tr| tag.
@@ -131,6 +160,7 @@
         <td colspan="3">Row 4 -Table Column 1</td>
       </tr>
     </table>
+    <hr>
     <h2>Inline and Block Elements</h2> <!-- //////////////////////////////////////////// -->
     <h3 style="color:blue">Types of Elements :</h3>
     <p>In HTML, most elements are defined as block level or inline elements. Block level elements start from a new line.</p>
@@ -160,7 +190,8 @@
     <p> You can insert inline elements inside block elements. For example, you can have multiple <b>|span|</b> elements inside a <b>|div|</b> element.
       Inline elements cannot contain any block level elements.
     </p>
-    <h2>The |form| Element</h2> <!-- //////////////////////////////////////////// -->
+    <hr>
+    <h2 id="four">The |form| Element</h2> <!-- //////////////////////////////////////////// -->
     <p>HTML forms are used to collect information from the user. Usually the form is submitted to a web page on a web server.</p>
     <p>The <b>method attribute</b> specifies the HTTP method (<b>GET</b> or <b>POST</b>) to be used when forms are submitted. The name attribute specifies a name for a form.</p>
     <p>|form action="url" method="GET"| OR |form action="url" method="POST"|</p>
@@ -186,7 +217,29 @@
     <input type="checkbox" id="input" name="gender" value="Male">Male
     <input type="checkbox" id="input " name="gender" value="Female">Female
     <input type="checkbox" id="input " name="gender" value="dontWant">Dont want to give information
+    <hr>
 
+    <h2>Audio and Video Elements</h2> <!-- //////////////////////////////////////////// -->
+
+
+
+
+
+
+
+
+
+
+    <hr>
+    <footer>
+      <p>The following information is usually provided between |footer| tags:
+        - Contact Information
+        - Privacy Policy
+        - Social Media Icons
+        - Terms of Service
+        - Copyright Information
+        - Sitemap and Related Documents</p>
+    </footer>
 </body>
 
 </html>
