@@ -6,7 +6,12 @@
 
 <head>
   <meta charset="utf-8">
-  <style media="screen">
+  <style media="screen"> /*  INLINE(in element <div style="text-align:center;">) or INTERNAL(<style></style> tag between <head></head> tag) or EXTERNAL(Link to .css file) */
+
+    #body {  /* Style which id = "body" */
+      background-color: #3D9970;
+    }
+
     h1,
     h2,
     h3,
@@ -19,21 +24,29 @@
 
     #kedi,
     #input {
-      margin-left: 620px;
+       display:block; margin: 0 auto;  max-width: 100%; height: auto;
     }
 
-    p {
+    p {   /* Style for all <p> tags */
       text-align: center;
     }
+
+    .webStructure {  /* Style for which class = "webStructure" */
+      display:block; margin: 0 auto; /*for align center*/   max-width: 100%;  height: auto; /*for responsive images */
+    }
+    .banner{
+        width: 100%;  height: 150px ;
+    }
+
   </style>
   <link rel="icon" href="images/favicon.png" type="image/x-icon" />
   <title>Ahmet AKAN</title>
 </head>
 
-<body>
+<body id="body">
 
   <header>
-    <img src="images/AnimalsBannerLogo.jpg" width="100%" height="200px" alt="BannerLogo">
+    <img class="banner" src="images/AnimalsBannerLogo.jpg" alt="BannerLogo">
   </header>
 
   <p>This document following , <a href="https://www.sololearn.com/learning/1014"> SoloLearn HTML Course</a> </p>
@@ -59,10 +72,10 @@
 
   <br>
   <br>
-  <img src="images/ContentModel.png" style="padding:50px" width="45%" alt="ContentModel">
-  <img src="images/ContentModel2.png" width="45%" alt="ContentModel2">
+  <img class="webStructure"src="images/ContentModel.png"  alt="ContentModel">
+  <img class="webStructure" src="images/ContentModel2.png"  alt="ContentModel2">
   <br>
-  <img src="images/sablon.png" style="padding-left:420px" alt="sablon">
+  <img class="webStructure" src="images/sablon.png"  alt="sablon">
 
   <hr>
   <h2 id="two">Modern Web Design</h2> <!-- //////////////////////////////////////////// -->
@@ -220,10 +233,36 @@
     <hr>
 
     <h2>Audio and Video Elements</h2> <!-- //////////////////////////////////////////// -->
+    <p>|<b>audio</b> autoplay loop controls| <br>
+      |source src="audio.mp3" type="audio/mp3"| <br>
+      |source src="audio.ogg" type="audio/ogg"| <br>
+    Audio element not supported by your browser <br>
+|<b>/audio</b>| <br>
+ <span style="color:red;"> Replace </span>  <b>audio</b> with <b>video</b> if needed. Use <b>|iframe|</b> element for Youtube videos.  </p>
+    <p>Attributes : <span style="color:brown;"> controls => </span> Specifies that media controls should be displayed (such as a play/pause button, etc.)</p>
+    <p> <span style="color:brown;"> autoplay => </span> When this attribute is defined, media starts playing as soon as it is ready, without asking for the visitor's permission.</p>
+    <p> <span style="color:brown;"> loop => </span>This attribute is used to have the audio replay every time it is finished.</p>
+    <p>Supported audio formats: MP3, WAV, and OGG. Supported video formats: MP4,OGG</p>
+    <p>Another aspect that the audio and video elements have in common is that the major browsers do not all support the same file types. If the browser does not support the first media type, it will try the next one.</p>
 
 
 
 
+        <audio style="display:block; margin: 0 auto;" src="music/Music_www.bensound.com.mp3" controls>
+          Audio element not supported by your browser.
+        </audio>
+        <a href="https:www.bensound.com" target="_blank"> <p>Music = www.bensound.com</p> </a>
+        <br>
+        <video style="display:block; margin: 0 auto;"  src="video/Programmer_life_Programming_Language _Free_HD_Video_no_copyright.mp4" loop controls >
+          Video element not supported by your browser.
+        </video>
+
+
+        <iframe style="display:block; margin: 0 auto;"  src="https://www.youtube.com/embed/oe70Uhjc_F4?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            Youtube element not supported by your browser.
+        </iframe>
+        <hr>
 
 
 
