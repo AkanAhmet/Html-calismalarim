@@ -93,10 +93,8 @@
   <p> For favicon |link rel="icon" href="images/favicon.png" type="image/x-icon" /|</p>
   <p> HTML is not a case sensitive language. Horizontal Lines : |hr| defines a thematic break. </p>
 
-
-  <br>
-  <br>
   <img class="webStructure" src="images/ContentModel.png" alt="ContentModel">
+  <br>
   <img class="webStructure" src="images/ContentModel2.png" alt="ContentModel2">
   <br>
   <img class="webStructure" src="images/sablon.png" alt="sablon">
@@ -300,13 +298,64 @@
     <h2>Progress Bar</h2> <!-- //////////////////////////////////////////// -->
     <p> The |progress| element provides the ability to create progress bars on the web.
       The progress element can be used within headings, paragraphs, or anywhere else in the body.
-      Progress Element Attributes
-      <b>Value:</b> Specifies how much of the task has been completed.
-      <b>Max:</b> Specifies how much work the task requires in total.
-      Example:
-    </p>
+      Use the |progress| tag in conjunction with <b> JavaScript </b> to <b> dynamically display </b> a task's progress.
+      Progress Element Attributes : <br>
+      <b>Value:</b> Specifies how much of the task has been completed. <br>
+      <b>Max:</b> Specifies how much work the task requires in total. <br>
 
+    </p>
     <progress value="35" min="0" max="100">35%</progress>
+
+    <hr>
+
+    <h2>Web Storage API</h2> <!-- //////////////////////////////////////////// -->
+    <p>With HTML5 web storage, websites can store data on a user's local computer.
+      Before HTML5, we had to use <b> JavaScript cookies </b> to achieve this functionality. </p>
+    <p>Local storage is per domain. All pages from one domain can store and access the same data.</p>
+    <p><span style="color:brown"> <i> The Advantages of Web Storage => </i> </span> </p>
+    <p>- More secure </p>
+    <p>- Faster </p>
+    <p>- Stores a larger amount of data </p>
+    <p>- Stored data is not sent with every server request</p>
+    <p>There are two types of web storage objects: </p>
+    <p> <b> - sessionStorage() : </b> Session Storage is destroyed once the user closes the browser. </p>
+    <p> <b>- localStorage() : </b> Local Storage stores data with no expiration date. </p>
+    <p> You need to be familiar with basic JavaScript in order to understand and use the API.</p>
+    <p>The syntax for web storage for both local and session storage is very simple and similar.
+      The data is stored as <b> key/value </b> pairs.
+      <br> <b> Storing a Value: </b>
+      localStorage.setItem("key1", "value1");
+      <br> <b> Getting a Value: </b>
+      <ins></ins> localStorage.getItem("key1");
+      <br> <b> Removing a Value: </b>
+      localStorage.removeItem("key1");
+      <br> <b> Removing All Values: </b>
+      localStorage.clear();
+      <br> The same syntax applies to the session storage, with one difference: Instead of localStorage, sessionStorage is used.
+    </p>
+    <hr>
+
+    <h2>Geolocation API</h2> <!-- //////////////////////////////////////////// -->
+    <p>In HTML5, the Geolocation API is used to obtain the user's geographical location.
+      Since this can compromise user privacy, the option is not available unless the user approves it.
+      Geolocation is much more accurate for devices with GPS, like smartphones and the like.
+      The Geolocation API’s main method is <b>getCurrentPosition </b>, which retrieves the current geographic location of the user's device.
+      The <b>getCurrentPosition() </b> method returns an object if it is successful. The latitude, longitude, and accuracy properties are always returned.
+      <span style="color:red"> navigator.geolocation.getCurrentPosition(); </span>
+    </p>
+    <p>Parameters: <br>
+      <b>showLocation (mandatory):</b> Defines the callback method that retrieves location information. <br>
+      <b>ErrorHandler(optional):</b> Defines the callback method that is invoked when an error occurs in processing the asynchronous call. <br>
+      <b>Options (optional): </b>Defines a set of options for retrieving the location information.
+    </p>
+    <p>User location can be presented in two ways: <b> Geodetic </b> and <b> Civic</b>.
+
+      <br>The <b>geodetic</b> way to describe position refers directly to latitude and longitude.
+      <br>The <b>civic</b> representation of location data is presented in a format that is more easily read and understood by the average person.</p>
+      <img  width="250px" height="250px" style="  display: block;  margin: 0 auto;"src="images/geolocation.png" alt="Civic and Geodetic diffrences.">
+<hr>
+
+<h2>Drag & Drop API</h2> <!-- //////////////////////////////////////////// -->
 
 
 
