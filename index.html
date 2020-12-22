@@ -73,7 +73,7 @@
     <img class="banner" src="images/AnimalsBannerLogo.jpg" alt="BannerLogo">
   </header>
 
-  <p>This document following , <a href="https://www.sololearn.com/learning/1014"> SoloLearn HTML Course</a> </p>
+  <p> This document following , <a href="https://www.sololearn.com/learning/1014" target="_blank"> SoloLearn HTML Course</a> </p>
 
   <nav>
     <table width="100%" border="15px">
@@ -236,7 +236,52 @@
       After the form is submitted, the data should be processed on the server using a programming language, such as PHP.</p>
     <p>To take in user input, you need the corresponding form elements, such as text fields.
       The <b>|input|</b> element has many variations, depending on the type attribute. It can be a text, password, radio, URL, submit, etc.</p>
+    <p>The <b>autofocus</b> attribute makes the desired input focus when the form loads.</p>
+    <p>The <b>required</b> attribute is used to make the input elements required.</p>
+    <p>
+      <br> <b> HTML5 added several new input types:</b>
+      - color
+      - date
+      - datetime
+      - datetime-local
+      - email
+      - month
+      - number
+      - range
+      - search
+      - tel
+      - time
+      - url
+      - week
 
+    <br>  <b> New input attributes in HTML5: </b>
+      - autofocus
+      - form
+      - formaction
+      - formenctype
+      - formmethod
+      - formnovalidate
+      - formtarget
+      - height and width
+      - list
+      - min and max
+      - multiple
+      - pattern (regexp)
+      - placeholder
+      - required
+      - step
+    </p>
+    <p>Note : Input types that are not supported by old web browsers, will behave as input type text.</p>
+    <p>The new <b>search input</b> type can be used to create a search box. The |datalist| tag can be used to define a list of pre-defined options for the search field:</p>
+    <div class="search" align="center">  Search for :  <input  type="search" name="searchitem" placeholder="Seach here.." list="colors">
+      <datalist id="colors">
+        <option value="Red"></option>
+        <option value="Orange"></option>
+        <option value="Blue"></option>
+        <option value="Green"></option>
+      </datalist>
+    </div>
+    <br>
     <form action="http://google.com" align="center">
       <span style="color:blue"> Email Input :&emsp;&nbsp;&nbsp; </span> <input type="email" placeholder="example@gmail.com" required> <br>
       <span style="color:blue">Password Input : </span> <input type="password" placeholder="******" required> <br>
@@ -351,16 +396,17 @@
     <p>User location can be presented in two ways: <b> Geodetic </b> and <b> Civic</b>.
 
       <br>The <b>geodetic</b> way to describe position refers directly to latitude and longitude.
-      <br>The <b>civic</b> representation of location data is presented in a format that is more easily read and understood by the average person.</p>
-      <img  width="250px" height="250px" style="  display: block;  margin: 0 auto;"src="images/geolocation.png" alt="Civic and Geodetic diffrences.">
-<hr>
+      <br>The <b>civic</b> representation of location data is presented in a format that is more easily read and understood by the average person.
+    </p>
+    <img width="250px" height="250px" style="  display: block;  margin: 0 auto;" src="images/geolocation.png" alt="Civic and Geodetic diffrences.">
+    <hr>
 
-<h2>Drag & Drop API</h2> <!-- //////////////////////////////////////////// -->
-
-
-
+    <h2>Drag & Drop API</h2> <!-- //////////////////////////////////////////// -->
 
 
+
+    <hr>
+    <img src="images/certificate.jpg" width="200px" height="100px" style="  display: block;  margin: 0 auto; alt=" certificate.jpg">
     <hr>
     <footer>
       <p>The following information is usually provided between |footer| tags:
