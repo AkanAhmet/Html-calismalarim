@@ -9,10 +9,8 @@
   <meta charset="utf-8">
 
   <style media="screen">
-/*  INLINE(in element |div style="text-align:center;"|) or INTERNAL(|style||/style| tag between |head||head| tag) or EXTERNAL(Link to .css file) */
-/* It's better to use EXTERNAL method because of Performance reasons. */
-
-
+    /*  INLINE(in element |div style="text-align:center;"|) or INTERNAL(|style||/style| tag between |head||head| tag) or EXTERNAL(Link to .css file) */
+    /* It's better to use EXTERNAL method because of Performance reasons. */
 
     h1,
     h2,
@@ -23,33 +21,46 @@
       color: red;
       text-align: center;
     }
-    p {   /* Style for all <p> tags  TAG */
+
+    p {
+      /* Style for all <p> tags  TAG */
       text-align: center;
     }
-    progress {
 
+    progress {
+      display: block;
+      margin: 0 auto;
     }
 
 
-    #body {  /* Style which id = "body"  ID */
+    #body {
+      /* Style which id = "body"  ID */
       background-color: #3D9970;
     }
 
-    #kedi
-   {
-       display:block; margin: 0 auto;  max-width: 100%; height: auto;
+    #kedi {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
     }
 
 
 
-    .webStructure {  /* Style for which class = "webStructure" CLASS */
-      display:block; margin: 0 auto; /*for align center*/   max-width: 100%;  height: auto; /*for responsive images */
-    }
-    .banner{
-        width: 100%;  height: 150px ;
+    .webStructure {
+      /* Style for which class = "webStructure" CLASS */
+      display: block;
+      margin: 0 auto;
+      /*for align center*/
+      max-width: 100%;
+      height: auto;
+      /*for responsive images */
     }
 
-
+    .banner {
+      width: 100%;
+      height: 150px;
+    }
   </style>
 
   <link rel="icon" href="images/favicon.png" type="image/x-icon" />
@@ -85,10 +96,10 @@
 
   <br>
   <br>
-  <img class="webStructure"src="images/ContentModel.png"  alt="ContentModel">
-  <img class="webStructure" src="images/ContentModel2.png"  alt="ContentModel2">
+  <img class="webStructure" src="images/ContentModel.png" alt="ContentModel">
+  <img class="webStructure" src="images/ContentModel2.png" alt="ContentModel2">
   <br>
-  <img class="webStructure" src="images/sablon.png"  alt="sablon">
+  <img class="webStructure" src="images/sablon.png" alt="sablon">
 
   <hr>
   <h2 id="two">Modern Web Design</h2> <!-- //////////////////////////////////////////// -->
@@ -234,19 +245,21 @@
       <button type="submit" name="button"> Submit</button>
     </form>
 
-  <div  style="text-align: center; width: 100%;">  <!-- Important  -->
-    <div style="margin: 0 auto; width:35%; text-align:left;">  <!-- Important  -->
-  <p>If we change the input type to <b>"radio"</b>, it allows the user select<b> only one </b> of a number of choices:</p>
-    <input type="radio"  name="gender" value="Male">Male <br>
-    <input type="radio"  name="gender" value="Female">Female <br>
-    <input type="radio"  name="gender" value="dontWant">Dont want to give information <br>
+    <div style="text-align: center; width: 100%;">
+      <!-- Important  -->
+      <div style="margin: 0 auto; width:35%; text-align:left;">
+        <!-- Important  -->
+        <p>If we change the input type to <b>"radio"</b>, it allows the user select<b> only one </b> of a number of choices:</p>
+        <input type="radio" name="gender" value="Male">Male <br>
+        <input type="radio" name="gender" value="Female">Female <br>
+        <input type="radio" name="gender" value="dontWant">Dont want to give information <br>
 
-    <p>The type <b>"checkbox"</b> allows the user to select <b>more than one</b> option:</p>
-    <input type="checkbox" name="gender" value="Male">Male <br>
-    <input type="checkbox" name="gender" value="Female">Female  <br>
-    <input type="checkbox" name="gender" value="dontWant">Dont want to give information <br>
-    </div>
+        <p>The type <b>"checkbox"</b> allows the user to select <b>more than one</b> option:</p>
+        <input type="checkbox" name="gender" value="Male">Male <br>
+        <input type="checkbox" name="gender" value="Female">Female <br>
+        <input type="checkbox" name="gender" value="dontWant">Dont want to give information <br>
       </div>
+    </div>
 
     <hr>
 
@@ -254,9 +267,10 @@
     <p>|<b>audio</b> autoplay loop controls| <br>
       |source src="audio.mp3" type="audio/mp3"| <br>
       |source src="audio.ogg" type="audio/ogg"| <br>
-    Audio element not supported by your browser <br>
-|<b>/audio</b>| <br>
- <span style="color:red;"> Replace </span>  <b>audio</b> with <b>video</b> if needed. Use <b>|iframe|</b> element for Youtube videos.  </p>
+      Audio element not supported by your browser <br>
+      |<b>/audio</b>| <br>
+      <span style="color:red;"> Replace </span> <b>audio</b> with <b>video</b> if needed. Use <b>|iframe|</b> element for Youtube videos.
+    </p>
     <p>Attributes : <span style="color:brown;"> controls => </span> Specifies that media controls should be displayed (such as a play/pause button, etc.)</p>
     <p> <span style="color:brown;"> autoplay => </span> When this attribute is defined, media starts playing as soon as it is ready, without asking for the visitor's permission.</p>
     <p> <span style="color:brown;"> loop => </span>This attribute is used to have the audio replay every time it is finished.</p>
@@ -266,30 +280,35 @@
 
 
 
-        <audio style="display:block; margin: 0 auto;" src="music/Music_www.bensound.com.mp3" controls>
-          Audio element not supported by your browser.
-        </audio>
-        <a href="https:www.bensound.com" target="_blank"> <p>Music = www.bensound.com</p> </a>
-        <br>
-        <video width="300px"style="display:block; margin: 0 auto; max-width:100% "  src="video/Programmer_life_Programming_Language _Free_HD_Video_no_copyright.mp4" loop controls >
-          Video element not supported by your browser.
-        </video>
-        <br>
-        <iframe style="display:block; margin: 0 auto;"  src="https://www.youtube.com/embed/oe70Uhjc_F4?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            Youtube element not supported by your browser.
-        </iframe>
-        <hr>
+    <audio style="display:block; margin: 0 auto;" src="music/Music_www.bensound.com.mp3" controls>
+      Audio element not supported by your browser.
+    </audio>
+    <a href="https:www.bensound.com" target="_blank">
+      <p>Music = www.bensound.com</p>
+    </a>
+    <br>
+    <video width="300px" style="display:block; margin: 0 auto; max-width:100% " src="video/Programmer_life_Programming_Language _Free_HD_Video_no_copyright.mp4" loop controls>
+      Video element not supported by your browser.
+    </video>
+    <br>
+    <iframe style="display:block; margin: 0 auto;" src="https://www.youtube.com/embed/oe70Uhjc_F4?list=PL4Gr5tOAPttLOY9IrWVjJlv4CtkYI5cI_" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      Youtube element not supported by your browser.
+    </iframe>
+    <hr>
 
-  <h2>Progress Bar</h2> <!-- //////////////////////////////////////////// -->
-  <p> The |progress| element provides the ability to create progress bars on the web.
-The progress element can be used within headings, paragraphs, or anywhere else in the body.
-Progress Element Attributes
-<b>Value:</b> Specifies how much of the task has been completed.
-<b>Max:</b> Specifies how much work the task requires in total.
-Example:</p>
+    <h2>Progress Bar</h2> <!-- //////////////////////////////////////////// -->
+    <p> The |progress| element provides the ability to create progress bars on the web.
+      The progress element can be used within headings, paragraphs, or anywhere else in the body.
+      Progress Element Attributes
+      <b>Value:</b> Specifies how much of the task has been completed.
+      <b>Max:</b> Specifies how much work the task requires in total.
+      Example:
+    </p>
 
- <progress  value="35" min="0" max="100">35%</progress>
+    <progress value="35" min="0" max="100">35%</progress>
+
+
 
 
 
