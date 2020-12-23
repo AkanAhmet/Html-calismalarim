@@ -48,7 +48,10 @@
       height: auto;
     }
 
-    #triangle,#box,#image,#canvas2 {
+    #triangle,
+    #box,
+    #image,
+    #canvas2 {
       display: block;
       margin: 0 auto;
     }
@@ -70,19 +73,19 @@
   </style>
 
   <script>
-function allowDrop(ev) {
-   ev.preventDefault();
-}
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
 
-function drag(ev) {
-   ev.dataTransfer.setData("text", ev.target.id);
-}
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
 
-function drop(ev) {
-   ev.preventDefault();
-   var data = ev.dataTransfer.getData("text");
-   ev.target.appendChild(document.getElementById(data));
-}
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
   </script>
 
 </head>
@@ -560,7 +563,7 @@ function drop(ev) {
 
     <p> <span style="color:brown"> <b>SVG vs. Canvas</b> </span> </p>
     <p>You can actually use both SVG and canvas on the same page, if needed. However, you cannot just draw SVG onto a canvas, or vice-versa.
-      <br > <b><i><ins> Canvas </b></i></ins>
+      <br> <b><i><ins> Canvas </b></i></ins>
       <br> - Elements are drawn programmatically
       <br> - Drawing is done with pixels
       <br> - Animations are not built in
@@ -584,13 +587,10 @@ function drop(ev) {
 
     <h2>Drag & Drop API</h2> <!-- //////////////////////////////////////////// -->
     <p>Drag & Drop animals image into frame.</p>
-   <div id="box" ondrop="drop(event)"
-   ondragover="allowDrop(event)"
-   style="border:3px solid black;
+    <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:3px solid black;
    width:250px; height:150px"></div>
 
-   <img id="image" src="images/sample.png" draggable="true"
-   ondragstart="drag(event)" width="250" height="150" alt= "resource = https://pngtree.com/so/animal-series" />
+    <img id="image" src="images/sample.png" draggable="true" ondragstart="drag(event)" width="250" height="150" alt="resource = https://pngtree.com/so/animal-series" />
     <hr>
 
     <img src="images/certificate.jpg" width="200px" height="100px" style="  display: block;  margin: 0 auto;" alt=" certificate.jpg" draggable="true">
