@@ -3,10 +3,13 @@
 <!--For Space = &nbsp;  ||||||| For Tab = &emsp; -->
 <html lang="en" dir="ltr">
 <!--  HyperText Markup Language , Last version is Html 5--->
+<!--  Best color codes on https://clrs.cc/ -->
 
 <head>
 
   <meta charset="utf-8">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  <title>Ahmet AKAN</title>
 
   <style media="screen">
     /*  INLINE(in element |div style="text-align:center;"|) or INTERNAL(|style||/style| tag between |head||head| tag) or EXTERNAL(Link to .css file) */
@@ -45,12 +48,10 @@
       height: auto;
     }
 
-    #triangle {
+    #triangle,#box,#image,#canvas2 {
       display: block;
       margin: 0 auto;
     }
-
-
 
     .webStructure {
       /* Style for which class = "webStructure" CLASS */
@@ -68,8 +69,22 @@
     }
   </style>
 
-  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
-  <title>Ahmet AKAN</title>
+  <script>
+function allowDrop(ev) {
+   ev.preventDefault();
+}
+
+function drag(ev) {
+   ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+   ev.preventDefault();
+   var data = ev.dataTransfer.getData("text");
+   ev.target.appendChild(document.getElementById(data));
+}
+  </script>
+
 </head>
 
 <body id="body">
@@ -146,7 +161,7 @@
       <b><br>|img src="image.jpg" alt = "" |</b> o define the image size, use the width and height attributes.
       The value can be specified in pixels or as a percentage. By default, an image has no borders. Use the border attribute within the image tag to create a border around the image.
     </p>
-    <img id="kedi" src="images/cat.jpg" alt="" border="10px" width="250px" height="250px" />
+    <img id="kedi" src="images/cat.jpg" alt=" " border="10px" width="250px" height="250px" />
     <hr>
     <h2>Links - The |a| Tag</h2> <!-- //////////////////////////////////////////// -->
     <p>Links are also an integral part of every web page. You can add links to text or images that will enable the user to click on them in order to be directed to another file or webpage.
@@ -462,7 +477,7 @@
 
       The following commands are available for path data:
       <br> <b> M:</b> moveto
-      <br> <b>L:</b> lineto
+      <br> <b> L:</b> lineto
       <br> <b> H:</b> horizontal lineto
       <br> <b> V:</b> vertical lineto
       <br> <b> C:</b> curveto
@@ -479,9 +494,105 @@
 
     <hr>
     <h2>The |canvas| Element</h2> <!-- //////////////////////////////////////////// -->
+    <p>The HTML canvas is used to draw graphics that include everything from simple lines to complex graphic objects.
+      The |canvas| element is <b>only a container </b> for graphics. You must use a script to actually draw the graphics (usually JavaScript).
+      The |canvas| element must have an id attribute so it can be referred to by JavaScript. The HTML canvas is a two-dimensional grid.
+      The upper-left corner of the canvas has the coordinates (0,0).
+      X coordinate increases to the right.
+      Y coordinate increases toward the bottom of the canvas.</p>
+
+    <canvas id="canvas1" width="1200" height="50"> </canvas>
+
+    <script>
+      var can = document.getElementById("canvas1");
+      var ctx = can.getContext("2d");
+      ctx.fillStyle = "rgba(0, 200, 0, 1)";
+      for (var i = 0; i < 22; i++) {
+        ctx.fillRect(36, 10, 22, 22);
+        ctx.translate(50, 0);
+      }
+    </script>
+
+    <p>The canvas supports various other methods for drawing: <br>
+
+      <span style="color:brown"> Draw a Line </span>
+      <br> <b> moveTo(x,y):</b> Defines the starting point of the line.
+      <br> <b> lineTo(x,y):</b> Defines the ending point of the line. <br>
+
+      <span style="color:brown"> Draw a Circle </span>
+      <br> <b> beginPath():</b> Starts the drawing.
+      <br> <b> arc(x,y,r,start,stop):</b> Sets the parameters of the circle.
+      <br> <b> stroke():</b> Ends the drawing. <br>
+
+      <span style="color:brown"> Gradients </span>
+      <br> <b> createLinearGradient(x,y,x1,y1):</b> Creates a linear gradient.
+      <br> <b> createRadialGradient(x,y,r,x1,y1,r1):</b> Creates a radial/circular gradient. <br>
+
+      <span style="color:brown"> Drawing Text on the Canvas </span>
+      <br> <b> Font:</b> Defines the font properties for the text.
+      <br> <b> fillText(text,x,y):</b> Draws "filled" text on the canvas.
+      <br> <b> strokeText(text,x,y):</b> Draws text on the canvas (no fill).
+    </p>
+
+    <p> <span style="color:brown"> Canvas Transformations </span> </p>
+    <p>The <b> translate(x,y) </b>method is used to move the Canvas.
+      x indicates how far to move the grid horizontally, and y indicates how far to move the grid vertically.</p>
+    <p>The <b> rotate(radians) </b> method is used to rotate the Canvas.</p>
+    <p>The <b> scale(ratex,ratey) </b> method scales the current drawing. It takes two parameters:
+      - The number of times by which the image should be scaled in the X-direction.
+      - The number of times by which the image should be scaled in the Y-direction</p>
+
+    <canvas id="canvas2" width="350" height="350"></canvas>
+    <script>
+      var canvas = document.getElementById('canvas2');
+      ctx = canvas.getContext('2d');
+      ctx.font = "bold 22px Tahoma";
+      ctx.textAlign = "start";
+      ctx.fillStyle = "rgba(219, 116, 250,1)";
+      ctx.fillText("start", 10, 30);
+      ctx.translate(100, 150);
+      ctx.fillText("after translate", 0, 0);
+      ctx.rotate(1);
+      ctx.fillText("after rotate", 0, 0);
+      ctx.scale(1.5, 4);
+      ctx.fillText("after scale", 0, 20);
+    </script>
+
+    <p> <span style="color:brown"> <b>SVG vs. Canvas</b> </span> </p>
+    <p>You can actually use both SVG and canvas on the same page, if needed. However, you cannot just draw SVG onto a canvas, or vice-versa.
+      <br > <b><i><ins> Canvas </b></i></ins>
+      <br> - Elements are drawn programmatically
+      <br> - Drawing is done with pixels
+      <br> - Animations are not built in
+      <br> - High performance for pixels-based drawing operations
+      <br> - Resolution dependent
+      <br> - No support for event handlers
+      <br> - You can save the resulting image as .png or .jpg
+      <br> - Well suited for graphic-intensive games
+
+      <br> <b><i><ins> SVG </b></i></ins>
+      <br> - Elements are part of the page's DOM (Document object model)
+      <br> - Drawing is done with vectors
+      <br> - Effects, such as animations are built in
+      <br> - Based on standard XML syntax, which provides better accessibility
+      <br> - Resolution independent
+      <br> - Support for event handlers
+      <br> - Not suited for game applications
+      <br> - Best suited for applications with large rendering areas (for example, Google Maps)
+    </p>
     <hr>
+
     <h2>Drag & Drop API</h2> <!-- //////////////////////////////////////////// -->
+    <p>Drag & Drop animals image into frame.</p>
+   <div id="box" ondrop="drop(event)"
+   ondragover="allowDrop(event)"
+   style="border:3px solid black;
+   width:250px; height:150px"></div>
+
+   <img id="image" src="images/sample.png" draggable="true"
+   ondragstart="drag(event)" width="250" height="150" alt= "resource = https://pngtree.com/so/animal-series" />
     <hr>
+
     <img src="images/certificate.jpg" width="200px" height="100px" style="  display: block;  margin: 0 auto;" alt=" certificate.jpg" draggable="true">
     <hr>
     <footer>
