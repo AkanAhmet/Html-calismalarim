@@ -10,13 +10,13 @@
   <link rel="stylesheet" href="css/css.css">
   <script type="text/javascript" src="js/js.js"> </script>
   <script>
-    $(document).ready(function() {
+    /*  $(document).ready(function() {
       var liste = ['#one', '#two', '#three', '#four', '#five', '#six', '#seven', '#eight']
       for (var i = 0; i < liste.length; i++) {
         deneme(liste[i]);
       }
-      alert("Click Headers to View Content");
-    });
+        alert("Click Headers to View Content");
+    }); */
 
     function deneme(id) {
       $(id).toggle();
@@ -440,15 +440,120 @@
   <div id="three">
 
     <div class="paragraph">
-      <p></p>
+      <div class="baslik">
+        The CSS Box Model
+      </div>
+      <p>All HTML elements can be considered as boxes.
+        The CSS box model represents the design and layout of the site.
+        It consists of <span class="e">margins</span>, <span class="e">borders</span>,
+        <span class="e">paddings</span>, and the actual <span class="e">content</span>. <br>
+        The properties work in the same <b>order</b>: <span class="e">top</span>, <span class="e">right</span>,
+        <span class="e">bottom</span>, and <span class="e">left</span>. <br>
+        <b> The image below illustrates the box model:</b>
+      </p>
+      <img src=resources/images/css/boxmodel.png alt="boxmodel.png" width="60%x" style="padding-bottom:5px;" />
     </div>
+    <div class="paragraph">
+      <p>When working with boxes, it is important to understand how the total width and height of an element is calculated. <br>
+        The total width is the sum of left and right margins, left and right borders, left and right paddings, and the actual width of the content. <br>
+        Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        Borders
+      </div>
+      <p>The CSS border property allows you to customize the borders of HTML elements.
+        In order to add a border to the element,
+        you need to specify the <span class="e">size</span>, <span class="e">style</span>, and <span class="e">color</span> of the border.
+        In CSS, it is possible to specify different borders for different sides, using the following properties: border-top-style,
+        border-right-style, border-bottom-style, and border-left-style for the corresponding sides.</p>
+      <span class="code_example"> border: 5px solid red; border-style: dotted;</span>
+    </div>
+
+    <div class="paragraph">
+      <p class="solidborder">This is an example of a red - solid border.</p>
+      <p class="firstsolidborder">Border width of this paragraph is set to 2px.</p>
+      <p class="secondsolidborder"> Border width of this paragraph is set to 15px. </p>
+      <p class="none">This paragraph has no border.</p>
+      <p class="dotted">This is a dotted border.</p>
+      <p class="dashed">This is a dashed border.</p>
+      <p class="double">This is a double border.</p>
+      <p class="groove">This is a grooved border.</p>
+      <p class="ridge">This is a ridged border.</p>
+      <p class="inset">This is an inset border.</p>
+      <p class="outset">This is an outset border.</p>
+      <p class="hidden">This is a hidden border.</p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        width - height and background-color
+      </div>
+      <p> <span class="code_example">max-width:90%; height:90px; background-color: aqua;</span> </p>
+      <div style="max-width:900%; height:90px; background-color: aqua; margin:10px;">
+
+      </div>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        background-image
+      </div>
+      <p>The <span class="e">background-image</span> property sets one or several background images in an element.
+        The <span class="e">url</span> specifies the path to the image file. Both relative and absolute paths are supported.
+        By default, a background-image is placed at the top-left corner of an element,
+        and is repeated both vertically and horizontally to cover the entire element.
+        To specify more than one image, just separate the URLs with <span class="e">commas</span>.</p>
+      <span class="code_example">body{ background-image: url("bg.png"); }</span>
+    </div>
+
+    <div class="paragraph">
+      <p>The background repeat property specifies how background images are repeated. <br>
+        A background image can be repeated along the <span class="e">horizontal axis</span>,
+        the <span class="e">vertical axis both axes</span>, or <span class="e">not repeated at all</span>.
+        The <span class="e">repeat-x</span> will repeat a background image only <span class="e">horizontally</span>. <br>
+        The <span class="e">repeat-y</span> will repeat a background image only <span class="e">Vertically</span>. <br>
+        If you want the image to be shown only once, use the <span class="e">no-repeat</span> value.
+        <span class="code_example">body { background-image: url("bg.png");background-repeat: repeat-x; } </span>
+      </p>
+    </div>
+    <div class="paragraph">
+      <p>The background-attachment property sets whether a background image is fixed or scrolls with the rest of the page.
+        Even if an element has a scrolling mechanism, a "fixed" background doesn't move with the element.</p>
+      <p>You can also set the background-attachment to <span class="e">inherit</span> or <span class="e">scroll</span>. <br>
+        When you set the background-attachment to <span class="e">inherit</span>, it will inherit the value from its parent element. <br>
+        When you set the background-attachment to <span class="e">scroll</span>, the background image will scroll with the rest of the content.
+        <span class="code_example">body { background-image: url("bg.png"); background-repeat: no-repeat;background-attachment: scroll; }</span>
+      </p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        Styling the Lists
+      </div>
+      <p>The CSS list properties allow us to set different list item markers. In HTML, there are two types of lists:
+        unordered lists (
+      <ul>) - the list items are marked with bullets
+        ordered lists (<ol>) - the list items are marked with numbers or letters
+          With CSS, lists can be styled further, and images can be used as the list item marker.
+          One of the ways is to use the list-style-type property, which can be set to circle, square, decimal, disc, lower-alpha, etc.</p>
+    </div>
+
+
+
+
+
+
+
+
 
   </div>
   <hr>
 
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
 
-  <h1 style="cursor: pointer;" onclick="deneme('#four')">4) Positioning and Layout</h1>
+  <h1 style=" cursor: pointer;" onclick="deneme('#four')">4) Positioning and Layout</h1>
   <div id="four">
 
     <div class="paragraph">
