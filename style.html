@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <link rel="icon" href="images/html/favicon.png">
+  <link rel="icon" href="/resources/images/html/favicon.png">
   <link rel="stylesheet" href="css/css.css">
   <script type="text/javascript" src="js/js.js"> </script>
   <title> Ahmet AKAN </title>
@@ -25,7 +25,8 @@
       - CSS defines how HTML elements are displayed.
     </p>
     <p>CSS allows you to apply specific styles to specific HTML elements.
-      The main benefit of CSS is that it allows you to separate <span class="e">style</span> from <span class="e">content</span>. Using just HTML, all the styles and formatting are in the same place, which becomes rather difficult to
+      The main benefit of CSS is that it allows you to separate <span class="e">style</span> from <span class="e">content</span>.
+      Using just HTML, all the styles and formatting are in the same place, which becomes rather difficult to
       maintain as the page grows. All formatting can (and <span class="e">should</span>) be removed from the HTML document and stored in a separate CSS file.</p>
   </div>
   <div class="paragraph">
@@ -37,7 +38,8 @@
     </ul>
   </div>
   <div class="paragraph">
-    <p>A style rule has three parts: <span class="e">selector</span>, <span class="e">property</span>, and <span class="e">value</span>. For example, the headline color can be defined as: <br>
+    <p>A style rule has three parts: <span class="e">selector</span>, <span class="e">property</span>, and <span class="e">value</span>.
+      For example, the headline color can be defined as: <br>
       <span style="color: #FF851B; font-weight:bold;"> h1 { color : orange; }</span> <br>
       The declaration block contains one or more declarations, separated by <span class="e">semicolons</span>.
     <h2> Type Selectors </h2>
@@ -49,122 +51,373 @@
 
     <h2>Descendant Selectors</h2>
     <b> #intro .first em {color: pink; background-color:gray;}</b>
-    <br> <br> <span style="color:red; font-style:italic;"> /* CSS Comments goes here */ </span> </p>
+    <br> <br> <span class="code_example"> /* CSS Comments goes here */ </span> </p>
   </div>
   <hr>
 
-  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+  <!--    -------------------------------------------------------------------------------------------------------->
 
   <h1>2) Working with Text</h1>
 
   <div class="paragraph">
+
     <div class="baslik">
       font-family
     </div>
+
     <p>The font-family property specifies the font for an element.
       There are <span class="e">two</span> types of font family names: <br>
       - <span class="e">font family:</span> a specific font family (like Times New Roman or Arial) <br>
       - <span class="e">generic family:</span> a group of font families with a similar look (like Serif or Monospace)</p>
+    Separate each value with a <span class="e">comma</span> to indicate that they are alternatives.
+    If the name of a font family is more than one word, it must be in quotation marks: "Times New Roman".
+    <span class="code_example"> font-family: "Times New Roman", Times, serif; </span>
+  </div>
+
+  <div class="paragraph">
+    <p class="serif">
+      This is a paragraph shown in serif font.
+    </p>
+    <p class="sansserif">
+      This is a paragraph shown in sans-serif font.
+    </p>
+    <p class="monospace">
+      This is a paragraph shown in monospace font.
+    </p>
+    <p class="cursive">
+      This is a paragraph shown in cursive font.
+    </p>
+    <p class="fantasy">
+      This is a paragraph shown in fantasy font.
+    </p>
+  </div>
+
+  <div class="paragraph">
+    <p> The font-family property should hold several font names as a "fallback" system.
+      When specifying a web font in a CSS style, add more than one font name, in order to avoid unexpected behaviors.
+      If the client computer for some reason doesn't have the one you choose, it will try the next one.
+      It is a good practice to specify a generic font family,
+      to let the browser pick a similar font in the generic family, if no other fonts are available.</p>
+    <span class="code_example"> font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; </span>
+    If the browser does not support the font <span class="e">Arial</span>, it tries the next fonts (<span class="e">Helvetica Neue</span>,
+    then <span class="e">Helvetica</span>).
+    If the browser doesn't have any of them, it will try the generic <span class="e">sans-serif</span>.
   </div>
 
   <div class="paragraph">
     <div class="baslik">
       font-size
     </div>
-    <p></p>
+    <p>The font-size property sets the size of a font.
+      One way to set the size of fonts on the web is to use <span class="e">keywords</span>.
+      For example <span class="e">xx-small</span>, <span class="e">small</span>, <span class="e">medium</span>, <span class="e">large</span>,
+      <span class="e">larger</span>, etc.
+      You can also use numerical values in <span class="e">pixels</span> or <span class="e">ems</span> to manipulate font size.
+      Setting the font size in pixel values (<span class="e">px</span>) is a good choice when you need pixel accuracy,
+      and it gives you full control over the text size.
+      The <span class="e">em</span> size unit is another way to set the font size ( <span class="e">em</span> is a relative size unit).
+      It allows all major browsers to resize the text. If you haven't set the font size anywhere on the page, then it is the
+      browser default size, which is <span class="e">16px</span>. <br>
+      To calculate the em size, just use the following formula: <span class="e">em = pixels / 16</span>
+      <span class="code_example">fonts-size:15px;</span>
+    </p>
+  </div>
+  <div class="paragraph">
+    <p class="nine">
+      Paragraph text set to be 9px;
+    </p>
+    <p class="small">
+      Paragraph text set to be small
+    </p>
+    <p class="medium">
+      Paragraph text set to be medium
+    </p>
+    <p class="large">
+      Paragraph text set to be large
+    </p>
+    <p class="xlarge">
+      Paragraph text set to be very large
+    </p>
   </div>
 
   <div class="paragraph">
     <div class="baslik">
       font-style
     </div>
-    <p></p>
+    <p>The font-style property has three values: <span class="e">normal</span>, <span class="e">italic</span>, and <span class="e">oblique</span>.
+      Oblique is very similar to italic, but less supported. <br>
+      The HTML <span class="e">|i|</span> tag will produce exactly the same result as the italic font style.</p>
+    <span class="code_example">font-style: italic;</span>
+  </div>
+  <div class="paragraph">
+    <p class="normalstyle">This paragraph is normal.</p>
+    <p class="italic">This paragraph is italic.</p>
+    <p class="oblique">This paragraph is oblique.</p>
   </div>
 
   <div class="paragraph">
     <div class="baslik">
-      font-weght
+      font-weight
     </div>
-    <p></p>
+    <p>The font-weight controls the boldness or thickness of the text. The values can be set as <span class="e">normal</span> (default size),
+      <span class="e">bold</span>, <span class="e">bolder</span>, and <span class="e">lighter</span>.
+      You can also define the font weight with a number from <span class="e">100 (thin)</span> to <span class="e">900 (thick)</span>,
+      according to how thick you want the text to be.
+      400 is the same as normal, and 700 is the same as bold. The HTML <span class="e">|strong|</span> tag also makes the text bold.
+      <span class="code_example">font-weight: bold;</span>
+    </p>
+  </div>
+  <div class="paragraph">
+    <p class="light">This is a font with a "lighter" weight.</p>
+    <p class="bold">This is a font with a "bold" weight.</p>
+    <p class="bolder">This is a font with a "bolder" weight.</p>
+    <p class="thicker">This is a font with a "700" weight.</p>
   </div>
 
   <div class="paragraph">
     <div class="baslik">
       font-variant
     </div>
-    <p></p>
+    <p>The CSS font-variant property allows you to convert your font to all small caps.
+      The values can be set as <span class="e">normal</span>, <span class="e">small-caps</span>, and <span class="e">inherit</span>.
+      <span class="code_example">font-variant: small-caps;</span>
+    </p>
+  </div>
+  <div class="paragraph">
+    <p class="normalvariant">Paragraph font variant set to normal.</p>
+    <p class="small">Paragraph font variant set to small-caps.</p>
+    <p class="inherit">Paragraph font variant set to inerit.</p>
   </div>
 
   <div class="paragraph">
     <div class="baslik">
-      font-color
+      color
     </div>
-    <p></p>
+    <p>The CSS color property specifies the color of the text.
+      One method of specifying the color of the text is using a <span class="e">color name</span>: like red, green, blue, etc.
+      Another way of defining colors is using <span class="e">hexadecimal values</span> and <span class="e">RGB</span>.
+      Hexadecimal form is a pound <span class="e">sign (#)</span> followed by at most, <span class="e">6</span> hex values <span class="e">(0-F)</span>.
+      RGB defines the individual values for Red, Green, and Blue.
+      <span class="code_example"> color: rgb(128, 0, 128);</span>
+    </p>
+  </div>
+  <div class="paragraph">
+    <p class="example">The text inside the paragraph is green.</p>
+    The text outside the paragraph is black (by default).
+    <p class="example2">The text inside the paragraph is rgb(128,0,128).</p>
+    <p class="example3">The text inside the paragraph is #7FDBFF.</p>
   </div>
 
   <div class="paragraph">
     <div class="baslik">
       Aligning Text Horizontally
     </div>
-    <p></p>
+    <p>The text-align property specifies the horizontal alignment of text in an element.
+      By default, text on your website is aligned to the left.
+      However, at times you may require a different alignment.
+      text-align property values are as follows: <span class="e">left</span>, <span class="e">right</span>,
+      <span class="e">center</span>, and <span class="e">justify</span>.
+      <span class="code_example">text-align: center;</span>
+    </p>
   </div>
+  <div class="paragraph">
+    <p class="left">This paragraph is aligned to <strong>left.</strong></p>
+    <p class="right">This paragraph is aligned to <strong>right.</strong></p>
+    <p class="center">This paragraph is aligned to <strong>center.</strong></p>
+  </div>
+
+
 
   <div class="paragraph">
     <div class="baslik">
       Aligning Text Vertically
     </div>
-    <p></p>
+    <p>The vertical-align property sets an element's vertical alignment.
+      Commonly used values are <span class="e">top</span>, <span class="e">middle</span>, and <span class="e">bottom</span>.
+      The vertical-align property also takes the following values:
+      <span class="e">baseline</span>, <span class="e">sub</span>,
+      <span class="e">super</span>, <span class="e">%</span> and <span class="e">px</span> (or <span class="e">pt</span>, <span class="e">cm</span>).
+      <span class="code_example"> vertical-align: bottom;</span>
+    </p>
+  </div>
+  <div class="paragraph">
+    <p>This is an <span class="baseline">inline text</span> example.</p>
+    <p>This is a <span class="sub">sub line text</span> example.</p>
+    <p> This is a <span class="super">super line text</span> example.</p>
+    <p> This is a <span class="pixel">pixel</span> example.</p>
+  </div>
+  <div class="paragraph">
+    <table border="1" cellpadding="2" cellspacing="0" style="height: 150px; ">
+      <tr>
+        <td class="top">Top</td>
+        <td class="middle">Middle</td>
+        <td class="bottom">Bottom</td>
+      </tr>
+    </table>
+  </div>
+  <div class="paragraph">
+    <p>Vertical align property does not act the same way for all elements.
+      For example, some additional CSS styling is needed for div elements.</p>
+    <div class="main">
+      <div class="para">
+        This text is aligned to the middle
+      </div>
+    </div> <br>
+    <span class="code_example">.main {
+      height: 150px; width: 400px;
+      background-color: LightSkyBlue;
+      display: inline-table;
+      } <br>
+      .paragraph {
+      display: table-cell;
+      vertical-align: middle;
+      } </span>
+    <span class="e">display: inline-table;</span> and <span class="e">display: table-cell;</span> styling rules are applied to make the vertical-align property work with divs.
   </div>
 
   <div class="paragraph">
     <div class="baslik">
       text-decoration
     </div>
-    <p></p>
+    <p>The text-decoration property specifies how the text will be decorated.
+      Commonly used values are: <br>
+      <span class="e"> none</span> - The default value, this defines a normal text <br>
+      <span class="e"> inherit</span> - Inherits this property from its parent element <br>
+      <span class="e">overline</span> - Draws a horizontal line above the text <br>
+      <span class="e"> underline</span>- Draws a horizontal line below the text <br>
+      <span class="e"> line-through</span> - draws a horizontal line through the text (substitutes the HTML <span class="e">|s|</span> tag) <br>
+      You can combine the <span class="e">underline</span>, <span class="e">overline</span>,
+      or <span class="e">line-through</span> values in a space-separated list to add multiple decoration lines.
+      <span class="code_example"> text-decoration: underline;</span>
+
+    </p>
+  </div>
+  <div class="paragraph">
+    <p class="none">This is default style of the text (none).</p>
+    <p class="inherit">This text inherits the decoration of the parent.</p>
+    <p class="overline">This is overlined text.</p>
+    <p class="underline">This is underlined text.</p>
+    <p class="line-through">This is lined-through text.</p>
   </div>
 
   <div class="paragraph">
     <div class="baslik">
       Indenting the Text
     </div>
-    <p></p>
+    <p>The text-indent property specifies how much horizontal space should be left before the beginning of the first line of the text.
+      Property values are <span class="e">length</span> (px, pt, cm, em, etc.), <span class="e">%</span>, and <span class="e">inherit</span>.</p>
+    <span class="code_example"> text-intent: 60px;</span>
+  </div>
+  <div class="paragraph">
+    <p class="intent">This is an example of
+      <strong>text-indent </strong> property.
+      First line of our text is indented to the right in 60px.
+      Besides pixels you can also use other measurement units,
+      like pt, cm, em, etc.
+    </p>
   </div>
 
   <div class="paragraph">
     <div class="baslik">
       text-shadow
     </div>
-    <p></p>
+    <p>The text-shadow property adds shadow to text.
+      It takes four values: the first value defines the distance of the shadow in the <span class="e">x (horizontal) direction</span>,
+      the second value sets the distance in the <span class="e">y (vertical) direction</span>,
+      the third value defines the <span class="e">blur</span> of the shadow, and the fourth value sets the <span class="e">color</span>.</p>
+    <span class="code_example">text-shadow: 5px 2px 4px grey; <br>
+      5px – the X-coordinate <br>
+      2px – the Y-coordinate <br>
+      4px – the blur radius <br>
+      grey – the color of the shadow</span>
   </div>
+  <div class="paragraph">
+    <p class="shadow">Text-shadow example</p>
+    <p class="blur">Text-shadow with blur effect</p>
+  </div>
+
+
 
   <div class="paragraph">
     <div class="baslik">
       text-transform
     </div>
-    <p></p>
+    <p>The text-transform CSS property specifies how to capitalize an element's text.
+      For example, it can be used to make text appear with each word capitalized.
+      Using text-transform property you can make text appear in all-uppercase or all-lowercase.
+      <span class="code_example">text-transform: capitalize;</span>
+    </p>
+  </div>
+  <div class="paragraph">
+    <p class="capitalize">
+      <b>Capitalize</b> value transforms the first
+      character in each word to uppercase;
+      all other characters remain unaffected.
+    </p>
+    <p class="uppercase"><b>Uppercase</b> value transforms all characters to uppercase.</p>
+    <p class="lowercase"><b>Lowercase</b> value transforms all characters to lowercase.</p>
   </div>
 
   <div class="paragraph">
     <div class="baslik">
       letter-spacing
     </div>
-    <p></p>
+    <p>The letter-spacing property specifies the <span class="e">space between characters</span> in a text. The values can be set as: <br>
+      -<span class="e">normal</span> defines the default style with no extra space between characters <br>
+      - <span class="e">length</span> defines an extra space between characters using measurement units like px, pt, cm, mm, etc.; <br>
+      - <span class="e">inherit</span> inherits the property from its parent element;</p>
+    For defining an extra space between characters, negative values are also permitted.
+    <span class="code_example"> letter-spacing:4px;</span>
+  </div>
+  <div class="paragraph">
+    <p class="normalspacing">This paragraph has no additional letter-spacing applied.</p>
+    <p class="positive ">This paragraph is letter-spaced at 4px.</p>
+    <p class="negative">This paragraph is letter-spaced at -1.5px</p>
   </div>
 
   <div class="paragraph">
     <div class="baslik">
       word-spacing
     </div>
-    <p></p>
+    <p>The word-spacing property specifies the <span class="e">space between words</span> in a text.
+      Just like the letter-spacing property, you can set the word-spacing values as
+      <span class="e">normal</span>, <span class="e">length</span>, and <span class="e">inherit</span>.
+      When a weird spacing is used, and it is necessary to keep the selected paragraph with normal word spacing, the normal option is usually used.
+      To define an extra space between words, you can use positive measurement values like
+      <span class="e">px</span>, <span class="e">pt</span>, <span class="e">pc</span>, <span class="e">cm</span>, <span class="e">mm</span>,
+      <span class="e">inches</span>,<span class="e">em</span>, and <span class="e">ex</span>.
+      Negative values are also permitted.
+      <span class="code_example">word-spacing: 20px;</span>
+    </p>
+  </div>
+  <div class="paragraph">
+    <p class="normalwordspacing">This paragraph has no additional word-spacing applied.</p>
+    <p class="pxwordspacing">This paragraph is word-spaced at 30px.</p>
+    <p class="positivewordspacing">This paragraph is word-spaced at 20px.</p>
+    <p class="negativewordspacing">This paragraph is word-spaced at -5px.</p>
+
   </div>
 
   <div class="paragraph">
     <div class="baslik">
       white-spacing
     </div>
-    <p></p>
+    <p>The white-space property specifies how white-space inside an element is handled.
+      The values can be set as <span class="e">normal</span>, <span class="e">inherit</span>, <span class="e">nowrap</span>, etc.
+      The <span class="e">nowrap</span> value makes the text continue on the same line until a <br> tag is encountered,
+      and also collapses all sequences of whitespace into a single whitespace.</p>
+    <span class="code_example"> white-space:nowrap;</span>
+  </div>
+  <div class="paragraph">
+    <p class="whitespace">
+      This paragraph has multiple spaces and
+      a line break, but it will be ignored, as we used the nowrap value.
+    </p>
   </div>
 
+  <div class="paragraph">
+
+  </div>
   <hr>
 
   <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
