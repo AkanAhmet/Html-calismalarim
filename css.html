@@ -1,17 +1,230 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <link rel="icon" href="images/favicon.png">
-  <title>Ahmet AKAN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="icon" href="images/html/favicon.png">
   <link rel="stylesheet" href="css/css.css">
-  <script type="text/javascript" src="js/css.js"></script>
+  <script type="text/javascript" src="js/js.js"> </script>
+  <title> Ahmet AKAN </title>
 </head>
 
 <body>
-Soon
+  <!-- NAVBAR GELECEK -->
+  <h1>1) Welcome to CSS</h1>
+  <div class="paragraph">
+    <p>
+      <span class="e">CSS</span> stands for <span class="e">C</span>ascading <span class="e">S</span>tyle <span class="e">S</span>heets.
+      <span class="e">Cascading</span>, refers to the way CSS applies one style on top of another.
+      <span class="e">Style Sheets</span>, control the look and feel of web documents.
+      <span class="e">CSS</span> and <span class="e">HTML</span> work hand in hand:
+      - HTML sorts out the page structure.
+      - CSS defines how HTML elements are displayed.
+    </p>
+    <p>CSS allows you to apply specific styles to specific HTML elements.
+      The main benefit of CSS is that it allows you to separate <span class="e">style</span> from <span class="e">content</span>. Using just HTML, all the styles and formatting are in the same place, which becomes rather difficult to
+      maintain as the page grows. All formatting can (and <span class="e">should</span>) be removed from the HTML document and stored in a separate CSS file.</p>
+  </div>
+  <div class="paragraph">
+    <P>There are <span class="e">three</span> ways to use CSS :</p>
+    <ul>
+      <li><span class="e">INLINE-></span> in element |div style="text-align:center;"|</li>
+      <li><span class="e">INTERNAL-></span> |head||style media="screen"|p { text-align: center;}|/style||/head| </li>
+      <li><span class="e">EXTERNAL-></span> Link to style.css file, |link rel="stylesheet" href="style.css"|</li>
+    </ul>
+  </div>
+  <div class="paragraph">
+    <p>A style rule has three parts: <span class="e">selector</span>, <span class="e">property</span>, and <span class="e">value</span>. For example, the headline color can be defined as: <br>
+      <span style="color: #FF851B; font-weight:bold;"> h1 { color : orange; }</span> <br>
+      The declaration block contains one or more declarations, separated by <span class="e">semicolons</span>.
+    <h2> Type Selectors </h2>
+    <ul>
+      <li> <span class="e"> Tag -> </span> <b>h1, p {font-weight: bold;}</b> </li>
+      <li> <span class="e"> Class -> </span> <b>.className {font-weight: bold;} </b></li>
+      <li> <span class="e"> Id -> </span> <b>#textId {font-weight: bold;}</b> </li>
+    </ul>
 
+    <h2>Descendant Selectors</h2>
+    <b> #intro .first em {color: pink; background-color:gray;}</b>
+    <br> <br> <span style="color:red; font-style:italic;"> /* CSS Comments goes here */ </span> </p>
+  </div>
+  <hr>
+
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <h1>2) Working with Text</h1>
+
+  <div class="paragraph">
+    <div class="baslik">
+      font-family
+    </div>
+    <p>The font-family property specifies the font for an element.
+      There are <span class="e">two</span> types of font family names: <br>
+      - <span class="e">font family:</span> a specific font family (like Times New Roman or Arial) <br>
+      - <span class="e">generic family:</span> a group of font families with a similar look (like Serif or Monospace)</p>
+  </div>
+
+  <div class="paragraph">
+    <div class="baslik">
+      font-size
+    </div>
+    <p></p>
+  </div>
+
+  <div class="paragraph">
+    <div class="baslik">
+      font-style
+    </div>
+    <p></p>
+  </div>
+
+  <div class="paragraph">
+    <div class="baslik">
+      font-weght
+    </div>
+    <p></p>
+  </div>
+
+  <div class="paragraph">
+    <div class="baslik">
+      font-variant
+    </div>
+    <p></p>
+  </div>
+
+  <div class="paragraph">
+    <div class="baslik">
+      font-color
+    </div>
+    <p></p>
+  </div>
+
+  <div class="paragraph">
+    <div class="baslik">
+      Aligning Text Horizontally
+    </div>
+    <p></p>
+  </div>
+
+  <div class="paragraph">
+    <div class="baslik">
+      Aligning Text Vertically
+    </div>
+    <p></p>
+  </div>
+
+  <div class="paragraph">
+    <div class="baslik">
+      text-decoration
+    </div>
+    <p></p>
+  </div>
+
+  <div class="paragraph">
+    <div class="baslik">
+      Indenting the Text
+    </div>
+    <p></p>
+  </div>
+
+  <div class="paragraph">
+    <div class="baslik">
+      text-shadow
+    </div>
+    <p></p>
+  </div>
+
+  <div class="paragraph">
+    <div class="baslik">
+      text-transform
+    </div>
+    <p></p>
+  </div>
+
+  <div class="paragraph">
+    <div class="baslik">
+      letter-spacing
+    </div>
+    <p></p>
+  </div>
+
+  <div class="paragraph">
+    <div class="baslik">
+      word-spacing
+    </div>
+    <p></p>
+  </div>
+
+  <div class="paragraph">
+    <div class="baslik">
+      white-spacing
+    </div>
+    <p></p>
+  </div>
+
+  <hr>
+
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <h1>3) Properties</h1>
+  <div class="paragraph">
+    <p></p>
+  </div>
+
+  <hr>
+
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <h1>4) Positioning and Layout</h1>
+  <div class="paragraph">
+    <p></p>
+  </div>
+  <hr>
+
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <h1>5) CSS3 Basics</h1>
+  <div class="paragraph">
+    <p></p>
+  </div>
+
+  <hr>
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <h1>6) Gradients & Backgrounds</h1>
+  <div class="paragraph">
+    <p></p>
+  </div>
+
+  <hr>
+
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <h1>7) Transitions & Transforms</h1>
+  <div class="paragraph">
+    <p></p>
+  </div>
+
+  <hr>
+
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <h1>8) CSS Filters</h1>
+  <div class="paragraph">
+    <p></p>
+  </div>
+
+  <hr>
+
+  <!--    ----------------------------------------------------------------------------------------------------------------------------------------  -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
 </body>
 
 </html>
