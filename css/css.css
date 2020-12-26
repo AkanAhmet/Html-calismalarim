@@ -1,3 +1,5 @@
+/* every element can be clickable =>  style="cursor: pointer;" onclick="function()"  */
+
 body {
   text-align: center;
   font-family: 'Ubuntu', monospace;
@@ -314,4 +316,4 @@ p.prewrap {  /* Pre-wrap value behaves as the pre value, except that it adds ext
   white-space: pre-wrap;
 }
 
-/*                 */
+/*    PROPERTIES  ----------------------------------------------------------------------------------------------------------------- */
