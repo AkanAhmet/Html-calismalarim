@@ -10,13 +10,13 @@
   <link rel="stylesheet" href="css/css.css">
   <script type="text/javascript" src="js/js.js"> </script>
   <script>
-    /*  $(document).ready(function() {
+    $(document).ready(function() {
       var liste = ['#one', '#two', '#three', '#four', '#five', '#six', '#seven', '#eight']
       for (var i = 0; i < liste.length; i++) {
         deneme(liste[i]);
       }
-        alert("Click Headers to View Content");
-    }); */
+      alert("Click Headers to View Content");
+    });
 
     function deneme(id) {
       $(id).toggle();
@@ -454,6 +454,7 @@
       <img src=resources/images/css/boxmodel.png alt="boxmodel.png" width="60%x" style="padding-bottom:5px;" />
     </div>
     <div class="paragraph">
+      <b>Total Width of an Element</b>
       <p>When working with boxes, it is important to understand how the total width and height of an element is calculated. <br>
         The total width is the sum of left and right margins, left and right borders, left and right paddings, and the actual width of the content. <br>
         Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</p>
@@ -509,6 +510,7 @@
     </div>
 
     <div class="paragraph">
+      <b>The background-repeat Property</b>
       <p>The background repeat property specifies how background images are repeated. <br>
         A background image can be repeated along the <span class="e">horizontal axis</span>,
         the <span class="e">vertical axis both axes</span>, or <span class="e">not repeated at all</span>.
@@ -519,6 +521,7 @@
       </p>
     </div>
     <div class="paragraph">
+      <b>The background-attachment Property</b>
       <p>The background-attachment property sets whether a background image is fixed or scrolls with the rest of the page.
         Even if an element has a scrolling mechanism, a "fixed" background doesn't move with the element.</p>
       <p>You can also set the background-attachment to <span class="e">inherit</span> or <span class="e">scroll</span>. <br>
@@ -533,16 +536,207 @@
         Styling the Lists
       </div>
       <p>The CSS list properties allow us to set different list item markers. In HTML, there are two types of lists:
-        unordered lists (
-      <ul>) - the list items are marked with bullets
-        ordered lists (<ol>) - the list items are marked with numbers or letters
-          With CSS, lists can be styled further, and images can be used as the list item marker.
-          One of the ways is to use the list-style-type property, which can be set to circle, square, decimal, disc, lower-alpha, etc.</p>
+        <span class="e"> unordered lists</span> (
+        |ul|) - the list items are marked with bullets
+        <span class="e"> ordered lists</span> (|ol|) - the list items are marked with numbers or letters
+        With CSS, lists can be styled further, and images can be used as the list item marker.
+        One of the ways is to use the <span class="e">list-style-type</span> property,
+        which can be set to <span class="e">circle</span>, <span class="e">square</span>,
+        <span class="e">decimal</span>, <span class="e">disc</span>, <span class="e">lower-alpha</span>, etc.
+        <span class="code_example"> ul{ list-style-type: square; } </span>
+      </p>
     </div>
 
+    <div class="paragraph">
+      <ol class="lower-alpha">
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+      </ol>
+      <ul class="circle">
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+      </ul>
+      <ul class="square">
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+      </ul>
+    </div>
+    <div class="paragraph">
+      <b>The List Image and Position</b>
+      <p>There are also other list properties, such as: <br>
+        <span class="e"> list-style-image</span> - specifies an image to be used as the list item marker. <br>
+        <span class="e"> list-style-position</span> - specifies the position of the marker box (inside, outside). <br>
+        "list-style-position: <span class="e">outside</span>" is the default value.
+        <span class="code_example"> ul { list-style-image: url("image.jpg"); list-style-position: inside; }</span>
+      </p>
+    </div>
+    <div class="paragraph">
+      <b>The list-style Property</b>
+      <p>The <span class="e">list-style</span> property is a shorthand property for setting list-style-type, list-style-image and list-style-position. <br>
+        It is used to set <span class="e">all</span> of the list properties in <span class="e">one declaration</span>. <br>
+        If one of the property values are missing, the default value for the missing property will be inserted, if any.
+        <span class="code_example"> ul{ list-style: square outsside none; }</span>
+      </p>
+    </div>
 
+    <div class="paragraph">
+      <div class="baslik">
+        Styling the Tables
+      </div>
+      <p>The look of an HTML table can be greatly improved with CSS.
+        The <span class="e">border-collapse</span> property specifies whether the table borders are collapsed into a single border or separated as default.
+        If the borders are separate, the <span class="e">border-spacing</span> property can be used to change the spacing.
+        <span class="code_example"> table { border-collapse: separate; border-spacing: 20px 40px;} </span>
+      </p>
+      <table border="1" style="margin-bottom:5px;">
+        <tr>
+          <td>Red</td>
+          <td>Green</td>
+        </tr>
+        <tr>
+          <td>Blue</td>
+          <td>Yellow</td>
+        </tr>
+      </table>
+    </div>
 
+    <div class="paragraph">
+      <b>The caption-side Property</b>
+      <p>The <span class="e">caption-side</span> property specifies the position of a table caption.
+        The values can be set as <span class="e">top</span> or <span class="e">bottom</span>.
+        <span class="code_example"> caption { caption-side: top; } </span>
+      </p>
+      <table border="1">
+        <caption>Some of Our Courses</caption>
+        <tr>
+          <th>Course name</th>
+          <th>Lessons</th>
+          <th>Quizzes</th>
+        </tr>
+        <tr>
+          <td>C++</td>
+          <td>81</td>
+          <td>363</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td>48</td>
+          <td>144</td>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td>38</td>
+          <td>119</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td>70</td>
+          <td>174</td>
+        </tr>
+      </table>
+    </div>
 
+    <div class="paragraph">
+      <b>The empty-cells property</b>
+      <p>The <span class="e">empty-cells</span> property specifies whether or not to display borders and background on empty cells in a table.
+        Possible values are: <br>
+        <span class="e"> show</span>: the borders of an empty cell are rendered <br>
+        <span class="e"> hide</span>: the borders of an empty cell are not drawn
+        <span class="code_example"> table { border-collapse: separate;empty-cells: hide; }</span>
+      </p>
+      <table border="1">
+        <tr>
+          <td>HTML</td>
+          <td>CSS</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td></td>
+        </tr>
+      </table>
+
+    </div>
+    <div class="paragraph">
+      <b>The table-layout Property</b>
+      <p>The <span class="e">table-layout</span> specifies how the width of table columns is calculated. The possible values are: <br>
+        <span class="e">auto</span> - when column or cell width are not explicitly set,
+        the column width will be in proportion to the amount of content in the cells that make up the column. <br>
+        <span class="e">fixed</span> - when column or cell width are not explicitly set,
+        the column width will not be affected by the amount of content in the cells that make up the column. <br>
+        The table layout is set to <span class="e">auto</span> by default.
+      </p>
+      <p>Table-layout is set to <b>auto</b> </p>
+      <table class="auto">
+        <tr>
+          <td width="10%">500.000.000.000.000 </td>
+          <td width="90%">20.000</td>
+        </tr>
+      </table>
+
+      <p>Table-layout is set to <b>fixed</b> </p>
+      <table class="fixed">
+        <tr>
+          <td width="10%">500.000.000.000.000</td>
+          <td width="90%">20.000</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        Styling the Links
+      </div>
+      <p>Links can be styled with any CSS property (e.g., color, font-family, background, etc.). <br>
+        In addition, links can be styled differently, depending on what state they are in. The following pseudo selectors are available: <br>
+        <span class="e"> a:link</span> - defines the style for normal unvisited links <br>
+        <span class="e"> a:visited</span> - defines the style for visited links <br>
+        <span class="e"> a:active</span> - a link becomes active once you click on it <br>
+        <span class="e"> a:hover</span> - a link is hovered when the mouse is over it <br>
+        The example below creates a link that will change the style when the <span class="e">mouse</span> is <span class="e">moved over it</span>.
+        <span class="code_example"> a:hover { color:red; }</span>
+      </p>
+      <p><a href="http://akanahmet.github.io" target="_blank">
+          This link is hovered when we mouse over it
+        </a></p>
+      <p>When setting the style for several link states, there are some <span class="e">order rules</span>: <br>
+        - <span class="e"> a:hover</span> <b>MUST</b> come <b>after</b> <span class="e">a:link</span> and <span class="e">a:visited</span> <br>
+        - <span class="e">a:active</span> <b>MUST</b> come <b>after</b> <span class="e">a:hove</span></p>
+    </div>
+    <div class="paragraph">
+      <b>Links' Text Decoration</b>
+      <p>By default, text links are underlined by the browser. <br>
+        One of the most common uses of CSS with links is to <span class="e">remove the underline</span>. <br>
+        In the example below, the <span class="e">text-decoration</span> property is used to remove the underline.
+        <span class="code_example"> a:link { text-decoration: none; }</span>
+      </p>
+      <p><a href="http://akanahmet.github.io" target="_blank" class="second">
+          This link has no underline.
+        </a></p>
+    </div>
+
+    <div class="paragraph">
+      <div class="baslik">
+        Customizing the Mouse Cursor
+      </div>
+      <p>CSS allows you to set your desired cursor style when you mouse over an element. <br>
+        For example, you can change your cursor into a hand icon, help icon, and much more, rather than using the default pointer. <br>
+        In the example below, the mouse pointer is set to a help icon when we mouse over the span element:
+        <span class="code_example" style="cursor:help;"> |span style="cursor:help;"> Do you need help? |/span| </span>
+      </p>
+    </div>
+    <div class="paragraph">
+      <b>The cursor Property Values</b>
+      <p>There are numerous other possible values for the <span class="e">cursor</span> property, such as: <br>
+        <span class="e"> default</span> - default cursor <br>
+        <span class="e"> crosshair</span> - cursor displays a crosshair <br>
+        <span class="e"> pointer</span> - cursor displays hand icon <br>
+        The list of possible values is quite long.
+      </p>
+      <img src="resources/images/css/cursor.png" alt="cursor styles" style="margin-bottom:9px;" />
+    </div>
 
 
 
